@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+  <h1>Are you sure that you really want to delete post?</h1>
+  {% csrf_token %}
+  <input type="submit" value="Delete">
+
+</form>
+</body>
+</html>

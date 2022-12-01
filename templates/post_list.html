@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>posts</title>
+</head>
+<body>
+
+<center>
+    <button><a href="/add-posts/">Create</a></button>
+    <h1 class="h1">Content</h1>
+</center>
+
+  <div>
+  <ul>
+    {% for i in post %}
+    <li>
+        <h2>{{ i.title }}</h2>
+        <p>{{ i.description }}</p>
+        <img src="{{ i.image.url }}" alt="" width="300" height="300">
+        <a href="/postview_detail/{{i.id}}">Read more</a>
+        <a href="/postview/{{i.id}}/delete/">Delete</a>
+        <a href="/postview/{{i.id}}/update/">Update</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+</body>
+</html>
